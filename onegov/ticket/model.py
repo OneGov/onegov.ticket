@@ -29,6 +29,9 @@ class Ticket(Base, TimestampMixin, ORMSearchable):
     #: the title of the ticket
     title = Column(Text, nullable=False)
 
+    #: the subtitle of the ticket for extra information about it's content
+    subtitle = Column(Text, nullable=True)
+
     #: the group this ticket belongs to. used to differentiate tickets
     #: belonging to one specific handler (handler -> group -> title)
     group = Column(Text, nullable=False)
